@@ -12,11 +12,13 @@ axios.defaults.paramsSerializer = (params) => {
 }
 
 app.get('/images', async (req, res, next) => {
+  const queries = req.query
   try {
     const fetch = await axios.get('/photos_public.gne', {
       params: {
         format: 'json',
-        nojsoncallback: 1
+        nojsoncallback: 1,
+        ...queries
       }
     })
 
