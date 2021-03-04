@@ -1,6 +1,7 @@
 const qs = require('qs')
 const axios = require('axios')
 const express = require('express')
+const cors = require('cors')
 const app = express()
 
 axios.defaults.baseURL = 'https://www.flickr.com/services/feeds'
@@ -10,6 +11,8 @@ axios.defaults.paramsSerializer = (params) => {
     arrayFormat: 'indices'
   })
 }
+
+app.use(cors())
 
 app.get('/images', async (req, res, next) => {
   const queries = req.query
@@ -37,6 +40,6 @@ app.get('/images', async (req, res, next) => {
   }
 });
 
-app.listen(3000, () => {
-  console.log('Listening to port 3000')
+app.listen(3030, () => {
+  console.log('Listening to port 3030')
 })
