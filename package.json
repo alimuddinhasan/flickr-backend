@@ -5,7 +5,8 @@
   "author": "alimudhasan@gmail.com",
   "license": "MIT",
   "scripts": {
-    "deve": "node index.js",
+    "dev": "node server.js",
+    "start": "node server.js",
     "test": "jest --detectOpenHandles"
   },
   "jest": {
