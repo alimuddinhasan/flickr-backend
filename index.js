@@ -40,6 +40,4 @@ app.get('/images', async (req, res, next) => {
   }
 });
 
-app.listen(3030, () => {
-  console.log('Listening to port 3030')
-})
+module.exports = app
