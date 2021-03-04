@@ -32,10 +32,7 @@ app.get('/images', async (req, res, next) => {
       throw new Error('Something went wrong!')
     }
 
-
-
   } catch (err) {
-    console.log('ERROR DONG')
     next(err)
   }
 });
